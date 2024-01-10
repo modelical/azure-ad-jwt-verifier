@@ -28,7 +28,7 @@ npm install azure-ad-jwt-verifier --save
 ### Verify
 
 ```ts
-import { verify, VerifyOptions } from 'azure-ad-jtw-verifier';
+import { verify, VerifyOptions } from 'azure-ad-jwt-verifier';
 
 const options: VerifyOptions = {
   jwksUri: 'https://login.microsoftonline.com/common/discovery/keys',
