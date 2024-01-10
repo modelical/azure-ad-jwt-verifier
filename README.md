@@ -2,7 +2,7 @@
 ![CI](https://github.com/justinlettau/azure-ad-verify-token/workflows/CI/badge.svg)
 [![Codecov](https://codecov.io/gh/justinlettau/azure-ad-verify-token/branch/master/graph/badge.svg)](https://codecov.io/gh/justinlettau/azure-ad-verify-token)
 
-# Azure AD Verify Token
+# Azure AD Verifier
 
 Verify JWT issued by Azure Active Directory B2C.
 
@@ -32,7 +32,7 @@ npm install azure-ad-verify-token --save
 ### Verify
 
 ```ts
-import { verify, VerifyOptions } from 'azure-ad-verify-token';
+import { verify, VerifyOptions } from 'azure-ad-jtw-verifier';
 
 const options: VerifyOptions = {
   jwksUri: 'https://login.microsoftonline.com/common/discovery/keys',
@@ -67,7 +67,7 @@ Example metadata endpoints:
 ### Configuration
 
 ```ts
-import { setConfig } from 'azure-ad-verify-token';
+import { setConfig } from 'azure-ad-jwt-verifier';
 
 setConfig({
   cacheLifetime: 12 * (60 * 60 * 1000), // 12 hours

@@ -1,16 +1,8 @@
 {
+  "extends": "./tsconfig-base.json",
   "compilerOptions": {
-    "allowJs": true,
-    "declaration": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["es6", "dom"],
-    "module": "node16",
-    "moduleResolution": "node16",
-    "noImplicitAny": true,
-    "outDir": "dist",
-    "target": "ES2019"
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["src/**/*.spec.ts"]
+      "module": "esnext",
+      "outDir": "dist/mjs",
+      "target": "esnext"
+  }
 }
