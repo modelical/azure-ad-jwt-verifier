@@ -16,6 +16,7 @@ Verify JWT issued by Azure Active Directory B2C.
 - 🚀 Automatically use the **rotated public keys** from Azure.
 - 💪 Written in **TypeScript**.
 - ♻️ **Configurable cache** for public keys.
+- 🔌 Compatible with ES modules and CommonJS projects.
 
 # Installation
 
