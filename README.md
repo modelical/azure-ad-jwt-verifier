@@ -1,7 +1,3 @@
-[![NPM Version](https://badge.fury.io/js/azure-ad-verify-token.svg)](https://badge.fury.io/js/azure-ad-verify-token)
-![CI](https://github.com/justinlettau/azure-ad-verify-token/workflows/CI/badge.svg)
-[![Codecov](https://codecov.io/gh/justinlettau/azure-ad-verify-token/branch/master/graph/badge.svg)](https://codecov.io/gh/justinlettau/azure-ad-verify-token)
-
 # Azure AD Verifier
 
 Verify JWT issued by Azure Active Directory B2C.
@@ -24,7 +20,7 @@ Verify JWT issued by Azure Active Directory B2C.
 # Installation
 
 ```bash
-npm install azure-ad-verify-token --save
+npm install azure-ad-jwt-verifier --save
 ```
 
 # Usage
