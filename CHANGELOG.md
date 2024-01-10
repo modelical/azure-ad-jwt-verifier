@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.2](https://github.com/modelical/azure-ad-jwt-verifier/compare/v1.0.1...v1.0.2) (2024-01-10)
+
+
+### Bug Fixes
+
+* import types ([56a3739](https://github.com/modelical/azure-ad-jwt-verifier/commit/56a3739acfbd5bb1fc06653c3134fe735b39d16e))
+
 ## [1.0.1](https://github.com/modelical/azure-ad-jwt-verifier/compare/v1.0.0...v1.0.1) (2024-01-10)
 
 
