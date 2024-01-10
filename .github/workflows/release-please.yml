@@ -17,7 +17,7 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: azure-ad-verify-token
+          package-name: azure-ad-jwt-verifier
       - uses: actions/checkout@v4
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v4
