@@ -32,8 +32,8 @@ import { verify, VerifyOptions } from 'azure-ad-jwt-verifier';
 
 const options: VerifyOptions = {
   jwksUri: 'https://login.microsoftonline.com/common/discovery/keys',
-  issuer: 'https://login.microsoftonline.com/<tenant_id>/v2.0',
-  audience: '<client_id>',
+  issuer: 'https://sts.windows.net/<tenant_id>/',
+  audience: '<audience_id>',
 };
 
 verify(token, options)
@@ -53,7 +53,7 @@ Verify options:
 | ---------- | -------- | ----------------------------------------------------------- |
 | `jwksUri`  | `string` | `jwk_uri` value obtained from B2C policy metadata endpoint. |
 | `issuer`   | `string` | `issuer` value obtained from B2C policy metadata endpoint.  |
-| `audience` | `string` | Application ID of the application accessing the tenant.     |
+| `audience` | `string` | Audience ID of the application accessing the tenant.        |
 
 Example metadata endpoints:
 
