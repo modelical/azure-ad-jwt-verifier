@@ -31,27 +31,27 @@
     ".": {
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js",
-      "types": "./index.d.ts"
+      "types": "./dist/types/index.d.ts"
     },
     "./cache": {
       "import": "./dist/esm/cache.js",
       "require": "./dist/cjs/cache.js",
-      "types": "./cache.d.ts"
+      "types": "./dist/types/cache.d.ts"
     },
     "./config": {
       "import": "./dist/esm/config.js",
       "require": "./dist/cjs/config.js",
-      "types": "./config.d.ts"
+      "types": "./dist/types/config.d.ts"
     },
     "./interfaces": {
       "import": "./dist/esm/interfaces.js",
       "require": "./dist/cjs/interfaces.js",
-      "types": "./interfaces.d.ts"
+      "types": "./dist/types/interfaces.d.ts"
     },
     "./verify": {
       "import": "./dist/esm/verify.js",
       "require": "./dist/cjs/verify.js",
-      "types": "./verify.d.ts"
+      "types": "./dist/types/verify.d.ts"
     }
   },
   "files": [
@@ -60,7 +60,7 @@
   "scripts": {
     "lint": "eslint . --ext .js,.ts",
     "test": "jest",
-    "build:types": "tsc --declarationDir ./dist --declaration --emitDeclarationOnly",
+    "build:types": "tsc --declarationDir ./dist/types --declaration --emitDeclarationOnly",
     "build": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && ./fixup.sh && npm run build:types",
     "prepublishOnly": "npm run build",
     "format": "prettier --write ."
