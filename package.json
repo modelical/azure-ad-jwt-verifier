@@ -1,7 +1,7 @@
 {
   "name": "azure-ad-jwt-verifier",
   "version": "1.0.0",
-  "description": "Verify JWT issued by Azure Active Directory B2C.",
+  "description": "Verify JWT tokens issued by Azure Active Directory B2C.",
   "keywords": [
     "azure",
     "ad",
