@@ -1,5 +1,4 @@
 import jsonwebtoken from 'jsonwebtoken';
-import fetch from 'node-fetch';
 import getPem from 'rsa-pem-from-mod-exp';
 
 import { getItem, setDeferredItem, setItem } from './cache.js';
