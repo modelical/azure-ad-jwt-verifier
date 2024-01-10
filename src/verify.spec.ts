@@ -1,5 +1,5 @@
-import nock from 'nock';
-
+import { http, HttpResponse } from 'msw';
+import { setupServer } from 'msw/node';
 import { jsonWebKey } from '../testing/mock-json-web-key.js';
 import {
   encodedValid,
@@ -11,39 +11,33 @@ import { VerifyOptions } from './interfaces.js';
 import { verify } from './verify.js';
 
 describe('verify method', () => {
-  let options: VerifyOptions;
+  const options: VerifyOptions = {
+    jwksUri: 'https://login.microsoftonline.com/common/discovery/v2.0/keys',
+    issuer: 'https://login.microsoftonline.com/{tenantid}/v2.0',
+    audience: '6e74172b-be56-4843-9ff4-e66a39bb12e3',
+  };
+  const server = setupServer(
+    http.get(options.jwksUri, () => {
+      return HttpResponse.json({ keys: [jsonWebKey] });
+    })
+  );
 
-  beforeEach(() => {
-    nock.disableNetConnect();
-    options = {
-      jwksUri: 'https://login.microsoftonline.com/common/discovery/v2.0/keys',
-      issuer: 'https://login.microsoftonline.com/{tenantid}/v2.0',
-      audience: '6e74172b-be56-4843-9ff4-e66a39bb12e3',
-    };
-  });
+  beforeAll(() => server.listen());
 
   afterEach(() => {
-    nock.cleanAll();
+    server.resetHandlers();
     clear();
   });
 
-  it('should return decoded token when valid', async () => {
-    nock(options.jwksUri)
-      .get(() => true)
-      .once()
-      .reply(200, { keys: [jsonWebKey] });
+  afterAll(() => server.close());
 
+  it('should return decoded token when valid', async () => {
     const result = await verify(encodedValid, options);
 
     expect(result).toEqual(payload);
   });
 
   it('should cache http requests', async () => {
-    nock(options.jwksUri)
-      .get(() => true)
-      .once()
-      .reply(200, { keys: [jsonWebKey] });
-
     verify(encodedValid, options);
     const result = await verify(encodedValid, options);
 
