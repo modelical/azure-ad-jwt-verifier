@@ -1,4 +1,4 @@
-# Azure AD Verifier
+# Azure AD JWT Verifier
 
 Verify JWT issued by Azure Active Directory B2C.
 
