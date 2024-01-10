@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.4](https://github.com/modelical/azure-ad-jwt-verifier/compare/v1.0.3...v1.0.4) (2024-01-10)
+
+
+### Bug Fixes
+
+* missing types field in package.json ([95c8912](https://github.com/modelical/azure-ad-jwt-verifier/commit/95c89120460bef80de7cdad960bebecd742ba0f9))
+
 ## [1.0.3](https://github.com/modelical/azure-ad-jwt-verifier/compare/v1.0.2...v1.0.3) (2024-01-10)
 
 
